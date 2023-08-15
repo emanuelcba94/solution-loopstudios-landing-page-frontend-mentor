@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+    /* Colors */
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+
+    /* Typography */
+    --font-f-text: 'Alata', sans-serif;
+    --font-f-title: 'Josefin Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h2,
+.header-text,
+.creations-btn {
+    font-family: var(--font-f-title);
+    text-transform: uppercase;
+}
+
+body {
+    font-family: var(--font-f-text);
+    font-size: 15px;
+    min-height: 100vh;
+}
+
+.desktop-menu-nav,
+.header-mobile-menu {
+    display: none;
+}
+
+.header-container {
+    background-image: url(../images/mobile/image-hero.jpg);
+    background-size: cover;
+    min-height: 80vh;
+    padding: 2.5rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/********************** HEADER **********************/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 150px;
+}
+
+.header-open-menu,
+.header-close-menu {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-text p {
+    border: 2px solid var(--White);
+    padding: 1rem;
+    color: var(--White);
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+/********************** MOBILE MENU **********************/
+.header-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Black);
+    position: fixed;
+    inset: 0;
+    padding: 2.5rem 1.5rem;
+    z-index: 100;
+}
+
+.mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu-nav ul {
+    font-family: var(--font-f-title);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mobile-menu-nav ul li a {
+    color: var(--White);
+    font-size: 2rem;
+}
+
+/********************** MAIN **********************/
+.main {
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/********************** VR SECTION **********************/
+.vr-image {
+    width: 100%;
+}
+
+.vr-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.vr-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.vr-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.vr-text p {
+    color: var(--Dark-Gray);
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/********************** CREATIONS SECTION **********************/
+.creations-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.creations-section>div>h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.creations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.creations-grid>div {
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+    background-size: cover;
+    height: 120px;
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+    position: relative;
+    isolation: isolate;
+    cursor: pointer;
+}
+
+.creations-grid>div:hover{
+    filter: opacity(50%);
+}
+
+.creations-grid>div::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    z-index: -1;
+}
+
+.creations-grid>div>h2 {
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.creations-grid>div:nth-child(1) {
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+}
+
+.creations-grid>div:nth-child(2) {
+    background-image: url(../images/mobile/image-night-arcade.jpg);
+}
+
+.creations-grid>div:nth-child(3) {
+    background-image: url(../images/mobile/image-soccer-team.jpg);
+}
+
+.creations-grid>div:nth-child(4) {
+    background-image: url(../images/mobile/image-grid.jpg);
+}
+
+.creations-grid>div:nth-child(5) {
+    background-image: url(../images/mobile/image-from-above.jpg);
+}
+
+.creations-grid>div:nth-child(6) {
+    background-image: url(../images/mobile/image-pocket-borealis.jpg);
+}
+
+.creations-grid>div:nth-child(7) {
+    background-image: url(../images/mobile/image-curiosity.jpg);
+}
+
+.creations-grid>div:nth-child(8) {
+    background-image: url(../images/mobile/image-fisheye.jpg);
+}
+
+.creations-btn {
+    border: 2px solid var(--Black);
+    background-color: transparent;
+    font-family: var(--font-f-text);
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    
+}
+
+.creations-btn:hover {
+    transition: all 0.5s ease;
+    background-color: var(--Black);
+    color: var(--White);
+}
+
+.btn-desktop {
+    display: none;
+}
+
+/* .attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+} */
+
+/********************** FOOTER **********************/
+.footer {
+    background-color: var(--Black);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: var(--White);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer-logo-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-menu ul li a {
+    color: var(--White);
+    font-size: 1rem;
+}
+
+.footer-social-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-socialmedia a img {
+    cursor: pointer;
+}
+
+.footer-copyright {
+    color: var(--Dark-Gray);
+    font-size: 1rem;
+}
+
+/********************** JS **********************/
+.disabled {
+    display: none;
+}
+
+/********************** MEDIA QUERIES **********************/
+@media screen and (min-width: 768px) {
+    .header-container {
+        background-image: url(../images/desktop/image-hero.jpg);
+        padding: 80px 120px;
+    }
+
+    .header-text {
+        max-width: 650px;
+    }
+
+    .header-text p {
+        padding: 2rem;
+        font-size: 4rem;
+    }
+
+    .header-open-menu {
+        display: none;
+    }
+
+    .desktop-menu-nav {
+        display: block;
+    }
+
+    .desktop-menu-nav ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .desktop-menu-nav ul li a {
+        color: var(--White);
+    }
+
+    .desktop-menu-nav ul li a:hover {
+        padding-bottom: 5px;
+        border-bottom: 3px solid white;
+    }
+
+    /* MAIN */
+    .main {
+        padding: 5rem 160px;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .header-container {
+        padding: 80px 160px;
+    }
+
+    /* VR SECTION */
+    .vr-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+
+    /* CREATIONS SECTION */
+    .btn-mobile {
+        display: none;
+    }
+
+    .btn-desktop {
+        display: block;
+    }
+
+    .creations-btn {
+        margin: 0;
+    }
+
+    .creations-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .creations-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .creations-grid>div {
+        height: 350px;
+    }
+
+    .creations-grid>div:nth-child(1) {
+        background-image: url(../images/desktop/image-deep-earth.jpg);
+    }
+
+    .creations-grid>div:nth-child(2) {
+        background-image: url(../images/desktop/image-night-arcade.jpg);
+    }
+
+    .creations-grid>div:nth-child(3) {
+        background-image: url(../images/desktop/image-soccer-team.jpg);
+    }
+
+    .creations-grid>div:nth-child(4) {
+        background-image: url(../images/desktop/image-grid.jpg);
+    }
+
+    .creations-grid>div:nth-child(5) {
+        background-image: url(../images/desktop/image-from-above.jpg);
+    }
+
+    .creations-grid>div:nth-child(6) {
+        background-image: url(../images/desktop/image-pocket-borealis.jpg);
+    }
+
+    .creations-grid>div:nth-child(7) {
+        background-image: url(../images/desktop/image-curiosity.jpg);
+    }
+
+    .creations-grid>div:nth-child(8) {
+        background-image: url(../images/desktop/image-fisheye.jpg);
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 40px 160px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-logo-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .footer-menu ul {
+        flex-direction: row;
+    }
+
+    .footer-menu ul li a:hover {
+        padding-bottom: 5px;
+        border-bottom: 3px solid white;
+    }
+
+    .footer-social-copy {
+        align-items: end;
+    }
+
+    .footer-socialmedia a img:hover {
+        padding-bottom: 3px;
+        border-bottom: 3px solid white;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    /* VR SECTION */
+    .vr-section {
+        display: grid;
+        grid-template-columns: 730px 1fr;
+        place-items: end;
+        gap: 0;
+    }
+
+    .vr-text {
+        background-color: var(--White);
+        text-align: start;
+        justify-content: space-between;
+        margin-left: -150px;
+        padding: 5rem 0rem 0rem 5rem;
+        max-width: 600px;
+        height: 300px;
+    }
+
+    .vr-text h2 {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .vr-text p {
+        padding: 0rem 0.9rem 0rem 0rem;
+    }
+
+    /* CREATIONS SECTION */
+
+    .creations-grid {
+        gap: 2rem;
+    }
+
+    .creations-grid>div {
+        height: 450px;
+        padding: 2rem;
+    }
+
+    .creations-grid>div>h2 {
+        font-size: 2rem;
+    }
+}
